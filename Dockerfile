@@ -97,7 +97,6 @@ RUN echo "cgi.fix_pathinfo=0" > ${php_vars} &&\
         -e "s/pm.max_spare_servers = 3/pm.max_spare_servers = 4/g" \
         -e "s/;pm.max_requests = 500/pm.max_requests = 200/g" \
         -e "s/;listen.mode = 0660/listen.mode = 0666/g" \
-        -e "s/listen = 127.0.0.1:9000/listen = \/var\/run\/php-fpm.sock/g" \
         -e "s/^;clear_env = no$/clear_env = no/" \
         ${fpm_conf}
 
