@@ -101,10 +101,10 @@ RUN echo "cgi.fix_pathinfo=0" > ${php_vars} &&\
         -e "s/^;clear_env = no$/clear_env = no/" \
         ${fpm_conf}
 
-ADD etc/supervisord.conf /etc/supervisor/supervisord.conf
+ADD etc/supervisord.conf /etc/supervisord.conf
 
 EXPOSE 9000
 
 WORKDIR /var/www/html
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
